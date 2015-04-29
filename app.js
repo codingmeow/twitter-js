@@ -15,10 +15,8 @@ app.set('view engine', 'html'); //sets the default view engine to html (so we do
 app.set('views', __dirname + '/views'); // sets the views path to our views folder (where we store our templates)
 
 
-
 app.get('/', function (req, res) {
   // res.send('Hello World!');
-
   var people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
   res.render( 'index', {title: 'Hall of Fame', people: people} );
 });
