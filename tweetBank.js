@@ -1,9 +1,10 @@
 var _ = require('underscore');
 
-var data = [];
+var data = [], counter = 0;
 
 var add = function (name, text) {
-  data.push({ name: name, text: text });
+  counter++;
+  data.push({ name: name, text: text, id: counter});
 };
 
 var list = function () {

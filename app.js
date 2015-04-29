@@ -1,4 +1,5 @@
 var express = require( 'express' );
+var bodyParser = require('body-parser');
 var logger = require('morgan');
 var swig = require('swig');
 var routes = require('./routes/');
@@ -11,6 +12,7 @@ var app = express();
 app.use( logger('dev') );
 app.use('/', routes);
 app.use(express.static(__dirname + '/public'));
+
 
 app.engine('html', swig.renderFile); //render HTML
 
