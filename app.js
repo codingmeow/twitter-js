@@ -1,13 +1,16 @@
 var express = require( 'express' );
 var logger = require('morgan');
 var swig = require('swig');
+var routes = require('./routes/');
+
 
 swig.setDefaults({ cache: false });//so it doesn't get in the way when we are coding
 
 var app = express();
 
 app.use( logger('dev') );
-
+app.use('/', routes);
+app.use(express.static(__dirname + '/public'));
 
 app.engine('html', swig.renderFile); //render HTML
 
