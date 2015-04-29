@@ -1,5 +1,6 @@
 var express = require( 'express' );
 var bodyParser = require('body-parser');
+var io = require('socket.io')(80);
 var logger = require('morgan');
 var swig = require('swig');
 var routes = require('./routes/');

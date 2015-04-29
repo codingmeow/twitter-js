@@ -26,6 +26,20 @@
             <input type="submit" value="Submit" />
           </form>
         {% endif %}
+        {% if nameForm %}
+          <form action="/submit" method="POST">
+
+            
+            <label for="name_field">Name:</label>
+            <input name="name"  {% for tweet in tweets %} value="{{tweet.name}}"  {% endfor %} type="text" id="name_field" />
+
+            <label for="text_field">Text:</label>
+            <input name="text" type="text" id="text_field" style="width: 350px;" />
+
+            <input type="submit" value="Submit" />
+            
+          </form>
+        {% endif %}
         <br/>
       </div>
 
