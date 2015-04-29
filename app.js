@@ -1,5 +1,6 @@
 var express = require( 'express' );
 var logger = require('morgan');
+var swig = require('swig');
 
 var app = express();
 
