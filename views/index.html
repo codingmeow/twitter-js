@@ -4,7 +4,7 @@
   
   <div class="page-header">
     <br/>
-    <h1>Welcome to Twitter.js, Nimit!</h1>
+    <h1>Welcome to Twitter.js, Jenny, Andrew and Kara!</h1>
   </div>
   <div class="row">
     <div class="col-md-3">
@@ -13,10 +13,33 @@
       10m followers
     </div>
     <div class="col-md-9">
-    
+    <div>
+        <h4>All Tweets</h4>
+      </div>
+
       <!-- display tweets here -->
       {% for tweet in tweets %}
-        <li>{{tweet.text}}</li>
+      <div class="row">
+
+        <div class="col-md-1">
+          <img src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg"><br>
+        </div>
+        <div>
+          <div >
+            <b><a href="/users/{{tweet.name}}" class="name">{{tweet.name}}</a></b>
+          </div>
+          <div>
+            {{tweet.text}}
+          </div>
+          <div>
+            <a href = "link here">Re-tweet</a>
+          </div>
+        </div>
+      </div>
+      <br/>
+
+        <!-- <li>{{tweet.name}}</li>
+        <li>{{tweet.text}}</li> -->
       {% endfor %}
       
     </div>
